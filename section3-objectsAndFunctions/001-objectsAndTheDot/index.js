@@ -1,19 +1,39 @@
-//Javascript uses standard mathematical rules to decide which operators are processed first
-var a = 3 + 4 * 8;
-//it first processes 4 * 8 which is 32
-//it then adds 3 + 32 bringing the total to 35
-console.log(a);
+var person = new Object();
 
-//in cases where the operators have the same level of associativity(either left to right, right to left, or none)
-var b = 9 / 3 * 8;
-//it first processes 9 / 3  which is 3
-//then it multiplies 3 * 8 bringing the total to 24
-console.log(b);
+//setting first and last name using bracket notation attaching properties to objects
+person['firstname'] = 'Anthony';
+person['lastname'] = 'Lopez';
 
-//grouping '()' parens take precedence over all others
-var c = (4 + 5) * 10;
-//it first processes 4 + 5 which is 9
-//then it multiplies 9 * 10 bringing the total to 90
-console.log(c);
+var firstNameProperty = 'firstname';
 
-// for more information visit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+// logs {firstname: "Anthony", lastname: "Lopez"}
+console.log(person);
+
+//logs Anthony
+console.log(person[firstNameProperty]);
+
+//if you want to call a property with bracket operator you have to add quotes
+console.log(person['firstname']);
+
+//above is the bracket method of accessing a property
+
+//accessing the person['firstNameProperty'] & person['lastNameProperty'] using the dot
+//no quotes needed
+console.log(person.firstname);
+console.log(person.lastname);
+
+//dot operator is more common than the bracket operator
+
+person.address = new Object();
+person.address.street = '111 Main St.';
+person.address.state = 'NH';
+person.address.city = 'Quickville';
+
+console.log(person.address.city);
+console.log(person.address.state);
+
+//same as console.log(person['address']['street']);
+console.log(person.address.street);
+
+//fyi: the code here is not a good way to create an object and was written this way for demonstration purposes
+
