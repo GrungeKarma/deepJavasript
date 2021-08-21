@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/GrungeKarma/deepJavasript/issues"
   },
-  "homepage": "https://github.com/GrungeKarma/deepJavasript#readme"
+  "homepage": "https://github.com/GrungeKarma/deepJavasript#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
 }
