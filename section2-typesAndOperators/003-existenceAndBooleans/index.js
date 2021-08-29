@@ -10,3 +10,6 @@ if (a || a === 0) {
   console.log('Something is there.')
 }
 //without or statement, nothing would be logged because 0 is coerced into a false value
+
+
+
